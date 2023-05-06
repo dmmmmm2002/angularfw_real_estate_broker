@@ -1,0 +1,45 @@
+<div class="container" *ngIf="imageInput">
+    <img class="estatesImage" [src]="loadedImage" />
+    <div class="break"></div>
+    <div>{{imageInput.name}}</div>
+    <div class="break"></div>
+    <div>{{imageInput.location}}</div>
+    <div class="break"></div>
+    <div>{{imageInput.photo_url}}</div>
+
+    <div class="break"></div>
+    <div *ngIf="descs.length">
+        <table>
+            <tr>
+                <th>User</th>
+                <th>Description</th>
+                <th>Date</th>
+            </tr>
+            <!--Attributum direktiva-->
+            <!--<tr *ngFor="let desc of descs; let i = index;" [ngClass]="i % 2 === 0 ? 'table-header-even' : 'table-header-odd'">-->
+            <tr *ngFor="let desc of descs; let i = index;"
+                [ngStyle]="{'background-color' : i % 2 === 0 ? 'rgb(72, 83, 131)' : 'rgb(124, 134, 179)'}">
+                <td>{{desc.name}}</td>
+                <td>{{desc.desc}}</td>
+                <td>{{desc.date | dateFormat}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="break"></div>
+    <form [formGroup]="descsForm" (ngSubmit)="addDesc()">
+        <div>
+            <label for="name">Name: </label>
+            <!--<input type="text" [(ngModel)]="descObject['name']" />-->
+            <input type="text" formControlName="name" />
+        </div>
+        <div class="break"></div>
+        <div>
+            <textarea rows="10" cols="50" formControlName="desc"></textarea>
+        </div>
+        <div class="break"></div>
+        <div>
+            <button type="submit">Send</button>
+        </div>
+    </form>
+</div>
