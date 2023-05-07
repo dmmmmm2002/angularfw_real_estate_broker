@@ -16,6 +16,10 @@
 * 2 különböző Lifecycle Hook ngOnInit, ngOnChanges 1p
 * 4 különböző route 1p
 
+A card valamilyen okból kifolyólag a hostolás után nem jelenik meg, így néz ki local-ban.
+![image](https://user-images.githubusercontent.com/101809050/236704224-affab6be-7a56-42ee-8470-aecc5f054452.png)
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
 ## Development server
