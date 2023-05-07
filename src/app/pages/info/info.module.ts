@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { InfoRoutingModule } from './info-routing.module';
 import { InfoComponent } from './info.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { InfoComponent } from './info.component';
   ],
   imports: [
     CommonModule,
-    InfoRoutingModule
+    InfoRoutingModule,
+    MatCardModule,
+    MatIconModule,
   ]
 })
 export class InfoModule { }

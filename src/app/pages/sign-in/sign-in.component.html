@@ -1,11 +1,22 @@
+<span class="loading-indicator" *ngIf="loading">
+<mat-spinner>
+
+</mat-spinner>
+</span>
+
 <div class="main_component">
     <h1>Welcome to my homepage!</h1>
-    <span><label for="email">Email: </label><input type="text" [formControl]="email"/></span>
-    <span><label for="password">Password: </label><input type="password" [formControl]="password"/></span>
+    <mat-form-field>
+        <mat-label for="email">Email: </mat-label><input matInput type="text" [formControl]="email"/>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label for="password">Password: </mat-label><input matInput type="password" [formControl]="password"/>
+    </mat-form-field>
 
     <span>
-        <button (click)="signin()">Sign in</button>
-        <button [routerLink]="'/sign-up'">Sign up</button>
+        <span><button mat-raised-button color="primary" (click)="signin()">Sign in</button></span>
+        <span><button mat-raised-button color="primary" [routerLink]="'/sign-up'">Sign up</button></span>
     </span>
-    <p>{{loadingObservation | async}}</p>
+    <!--Async pipe
+    <p>{{loadingObservation | async}}</p>-->
 </div>

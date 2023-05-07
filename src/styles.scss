@@ -5,3 +5,35 @@ $bgcolor : rgb(138, 144, 161);
 html {
     background-color: $bgcolor;
 }
+
+html, body { height: 100%; }
+
+body {
+     margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.loading-indicator {
+    position: fixed;
+    z-index: 1000;
+    height: 1em;
+    width: 1em;
+    overflow: show;
+    margin: auto;
+    padding: 0;
+    top: 0;
+    left: 0; 
+    bottom: 0;
+    right: 0;
+}
+
+.loading-indicator::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.4);
+}

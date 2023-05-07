@@ -1,7 +1,7 @@
-<select [(ngModel)]="actualPage" (change)="menuSwitch(actualPage)">
-    <option value="sign-in">Sign in</option>
-    <option value="sign-up">Sign up</option>
-    <option value="main">Main</option>
-    <option value="estates">Estates</option>
-    <option value="info">Info</option>
-</select>
+<mat-nav-list>
+    <a mat-list-item routerLink="/sign-in" (click)="close()"><mat-icon>login</mat-icon><span>Sign in</span></a>
+    <a mat-list-item routerLink="/sign-up" (click)="close()"><mat-icon>app_registration</mat-icon><span>Sign up</span></a>
+    <a mat-list-item routerLink="/main" (click)="close()"><mat-icon>grid_view</mat-icon><span>Home</span></a>
+    <a mat-list-item routerLink="/estates" (click)="close()"><mat-icon>collections</mat-icon><span>Estates</span></a>
+    <a mat-list-item routerLink="/info" (click)="close()"><mat-icon>info</mat-icon><span>Info</span></a>
+</mat-nav-list>

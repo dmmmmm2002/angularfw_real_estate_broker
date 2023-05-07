@@ -13,3 +13,23 @@
 form div {
     padding: 5px;
 }
+
+form {
+    display: inline-grid;
+    width: 40%;
+    align-self: center;
+}
+
+.subForm{
+    width: 100%;
+    display: inline-grid;
+}
+
+.buttons {
+    padding: 5px;
+    
+}
+
+button {
+    width: 100px;
+}

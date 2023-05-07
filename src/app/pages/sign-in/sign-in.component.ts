@@ -16,6 +16,8 @@ export class SignInComponent implements OnDestroy {
   loadingSubscription?: Subscription;
   loadingObservation?: Observable<boolean>;
 
+  loading: boolean = false;
+
   constructor(private router: Router, private loadingService: LoadingService) { }
 
   ngOnDestroy(): void {
@@ -23,6 +25,7 @@ export class SignInComponent implements OnDestroy {
   }
 
   async signin() {
+    this.loading = true;
     //promise
     /*this.loadingService.loadingWithPromise(this.email.value as string, this.password.value as string).then((_: boolean) => {
       this.router.navigateByUrl('/main')
@@ -51,8 +54,10 @@ export class SignInComponent implements OnDestroy {
           next: (data: boolean) => {
             this.router.navigateByUrl('/main');
           }, error: (error) => {
+            this.loading = false;
             console.error(error);
           }, complete: () => {
+            this.loading = false;
             console.log('finally');
           }
         }
