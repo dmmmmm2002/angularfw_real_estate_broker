@@ -3,6 +3,7 @@
 ## Megvalósított szempontok
 * Fordítási hiba nincs 1p
 * Futtatási hiba nincs 1p
+* Firebase Hosting URL 1p
 * 3 adatmodell definiálása 1.5p
 * Alkalmazás felbontása 1p
 * Reszponzív, mobile-first felület 2p
@@ -14,8 +15,6 @@
 * 1 saját Pipe 2p
 * 2 különböző Lifecycle Hook ngOnInit, ngOnChanges 1p
 * 4 különböző route 1p
-
-A Firebase Hosting-ot angular 16.0.0-val nem sikerült semmilyen úton-módon megvalósitani. Az angular/fire installálására nem sikerült megoldást találnom, lehet a 15-ös angular verzió lett volna a megoldás...
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 
