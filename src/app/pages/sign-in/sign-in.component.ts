@@ -26,27 +26,7 @@ export class SignInComponent implements OnDestroy {
 
   async signin() {
     this.loading = true;
-    //promise
-    /*this.loadingService.loadingWithPromise(this.email.value as string, this.password.value as string).then((_: boolean) => {
-      this.router.navigateByUrl('/main')
-    }).catch(error => {
-      console.error(error, 'Incorrect email or password!');
-    }).finally(() => {
-      console.log('Executed finally.');
-    });*/
 
-    //async-await
-    /*try {
-      const _ = await this.loadingService.loadingWithPromise(this.email.value as string, this.password.value as string);
-      this.router.navigateByUrl('main');
-    } catch (error) {
-      console.error(error, 'Incorrect email or password!');
-    }
-    console.log('Executed finally.');*/
-
-
-    // Observable
-    // memory leak
     this.loadingObservation = this.loadingService.loadingWithObservable(this.email.value as string, this.password.value as string)
     this.loadingSubscription = this.loadingObservation
       .subscribe(

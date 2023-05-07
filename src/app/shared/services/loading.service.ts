@@ -22,12 +22,10 @@ export class LoadingService {
   }
 
   loadingWithObservable(email: string, password: string): Observable<boolean> {
-    // data stream
     return new Observable((subscriber: Subscriber<boolean>) => {
       let i = 0;
       const interval = setInterval(() => {
         i++;
-        // subscriber.next(i);
         if (i === 3) {
           if (email === 'test@gmail.com' && password === 'Test1234') {
             subscriber.next(true);
